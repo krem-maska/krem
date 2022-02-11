@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@font-face {
+  font-family: AstroSpace;
+  src: url(/fonts/AstroSpace.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #000; /* Color fondo geneal */
+}
+
+header {
+  background-color: #111; /* Color navbar */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+h1{
+  color: #fff; /* Color titulos albums */
+}
+
+img{
+  border-radius: 8px; /* Borde redondeado imagen */
+  max-width: 168px;
+  border: #222 0.3em solid; /* Borde */
+}
+
+img:hover{
+  border: #08cc08 0.3em solid; /* Borde hover */
+  transition: border 0.1s /* Transicion hover borde */
+}
+
+hr{
+  border-color: #222; 
+}
+
+span{
+  color: #08cc08; /* Color letras dentro de span */
+}
+
+p{
+  font-size: 18px; /* Tamaño <p> */
+}
+
+.artista{
+  max-width: 115px;
+  border-radius: 100%;
+  border: transparent;
+}
+
+.artista:hover{
+  border: transparent;
+}
+
+.main-nav {
+  height: 90px; /* Altura background navbar */
+}
+
+/* ==== Logo ==== */
+.logo {
+  color: #08cc08; /* Color */
+  line-height: 90px; /* Altura */
+  font-size: 30px; /* Tamaño fuente */
+  font-weight: bold; 
+  text-decoration: none; /* Desactiva subrayado */
+  margin-left: 30px; /* Posicion horizontal */
+  font-family: "AstroSpace", sans-serif;
+}
+
+.logo:hover{
+  color: #fff;
+  line-height: 90px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 30px;
+  font-family: "AstroSpace", sans-serif;
+  transition: 0.1s;
+}
+
+/* ==== <a> ==== */
+.navlinks {
+  list-style: none;
+  float: right;
+  line-height: 90px; /* Altura */
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks li {
+  display: inline-block;
+  margin: 0 20px; /* Separacion */
+}
+
+.navlinks li a {
+  color: #fff; /* Color letras */
+  text-decoration: none; /* Desactiva subrayado */
+  font-size: 18px; /* Tamaño fuente */
+  text-transform: uppercase; 
+  transition: all 0.1s linear 0s; /* Desvanecimiento de color hover */
+}
+
+
+.navlinks li a:hover {
+  color: #08cc08; /* Color hover */
+  transition: all 0.1s linear 0s;
+}
+
+/* ==== <a> boton con background */
+li a.contact {
+  background-color: #08cc08; /* color fondo */
+  color: #000; /* Color letras */
+  padding: 9px 20px; /* Ancho y largo background */
+  border-radius: 10px; /* Borde redondeado */
+  transition: all 0.1s linear 0s; /* Desvanecimiento de color hover */
+}
+
+li a.contact:hover {
+  background-color: #fff; /* Color hover background */
+  color: #000; /* Color hover letras */
+  border-bottom: none; 
+  transition: all 0.1s linear 0s; /* Transicion */
+}
+
+.boton{
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 25px;
+  border-radius: 10px;
+  transition: all 0.2s linear 0s;
+}
+
+.boton:hover {
+  background-color: #08cc08;
+  color: #111;
+  border-bottom: none;
+}
+
+/* ==== Sandwich boton responsive ==== */
+.menu-btn {
+  color: #fff; /* Color */
+  font-size: 25px; /* Tamaño */
+  float: right;
+  line-height: 90px; /* Altura */
+  margin-right: 40px;
+  cursor: none; /* ver hitbox al darle click [por defecto "pointer"] */
+  display: none;
+}
+
+#isChecked {
+  display: none;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.footer {
+  background: #000;
+}
+
+.footer .credit {
+  text-align: center;
+  padding-top: 18px;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: #fff;
+  border-top: 0.1rem solid #08cc08;
+}
+
+.footer .credit span {
+  color: #08cc08;
+}
+
+/*============ Scrollbar ============*/
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: #08cc08;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #088008;
+}
+
+@media (max-width: 800px) {
+  .navlinks {
+    position: fixed;
+    width: 100%; /* Que tanto a la izquierda se desplegara */
+    height: 100vh;
+    text-align: center;
+    background: #111; /* Color background menu desplegable */
+    right: -100%;
+    transition: all 0.3s; /* Velocidad transicion despliegue */
+  }
+
+  .navlinks li {
+    display: block;
+  }
+
+  .navlinks li a {
+    font-size: 20px; /* Tamaño fuente */ 
+  }
+
+  .navlinks li a:hover {
+    border-bottom: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+
+  #isChecked:checked ~ .navlinks {
+    right: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .logo {
+    margin-left: 15px;
+    font-size: 25px;
+  }
+
+  .menu-btn {
+    margin-right: 15px;
+    font-size: 25px;
+  }
+}
